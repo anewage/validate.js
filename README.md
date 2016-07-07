@@ -2,6 +2,7 @@
 
 validate.js is a lightweight JavaScript form validation library inspired by CodeIgniter.
 A Persian translation has been added to this package, thus persian developers can use it on their Farsi web applications.
+Also you can find an example of Iranian mobile phone number validation in this repo, having a Persian callback message.
 
 ## Features
 
