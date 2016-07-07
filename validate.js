@@ -6,6 +6,10 @@
  * http://rickharrison.github.com/validate.js
  */
 
+/*
+ * Translation to farsi by Amir Haghighati, https://github.com/anewage
+ */
+
 (function(window, document, undefined) {
     /*
      * If you would like an application-wide config, change these defaults.
@@ -14,33 +18,33 @@
 
     var defaults = {
         messages: {
-            required: 'The %s field is required.',
-            matches: 'The %s field does not match the %s field.',
-            "default": 'The %s field is still set to default, please change.',
-            valid_email: 'The %s field must contain a valid email address.',
-            valid_emails: 'The %s field must contain all valid email addresses.',
-            min_length: 'The %s field must be at least %s characters in length.',
-            max_length: 'The %s field must not exceed %s characters in length.',
-            exact_length: 'The %s field must be exactly %s characters in length.',
-            greater_than: 'The %s field must contain a number greater than %s.',
-            less_than: 'The %s field must contain a number less than %s.',
-            alpha: 'The %s field must only contain alphabetical characters.',
-            alpha_numeric: 'The %s field must only contain alpha-numeric characters.',
-            alpha_dash: 'The %s field must only contain alpha-numeric characters, underscores, and dashes.',
-            numeric: 'The %s field must contain only numbers.',
-            integer: 'The %s field must contain an integer.',
-            decimal: 'The %s field must contain a decimal number.',
-            is_natural: 'The %s field must contain only positive numbers.',
-            is_natural_no_zero: 'The %s field must contain a number greater than zero.',
-            valid_ip: 'The %s field must contain a valid IP.',
-            valid_base64: 'The %s field must contain a base64 string.',
-            valid_credit_card: 'The %s field must contain a valid credit card number.',
-            is_file_type: 'The %s field must contain only %s files.',
-            valid_url: 'The %s field must contain a valid URL.',
-            greater_than_date: 'The %s field must contain a more recent date than %s.',
-            less_than_date: 'The %s field must contain an older date than %s.',
-            greater_than_or_equal_date: 'The %s field must contain a date that\'s at least as recent as %s.',
-            less_than_or_equal_date: 'The %s field must contain a date that\'s %s or older.'
+            required: 'وارد کردن %s الزامی است.',
+            matches: 'عبارت وارد شده در %s با عبارت %s هم‌خوانی ندارد. لطفاً آن‌را تغییر دهید',
+            "default": 'مقدار %s همچنان مقدار پیش‌فرض است. لطفاً آن‌را تغییر دهید.',
+            valid_email: 'عبارت %s ایمیل معتبری نیست. لطفاً اعتبار ایمیل را بررسی کنید.',
+            valid_emails: 'تمامی ایمیل‌های وارد شده در %s باید معتبر باشند. لطفاً اعتبار ایمیل‌ها را بررسی کنید.',
+            min_length: 'عبارت %s می‌بایست حداقل %s کاراکتر (حرف) داشته باشد.',
+            max_length: 'عبارت %s می‌بایست حداکثر %s کاراکتر (حرف) داشته باشد.',
+            exact_length: 'عبارت %s می‌بایست دقیقاً %s عداد کاراکتر داشته باشد.',
+            greater_than: 'مقدار عددی %s باید بیشتر از %s باشد.',
+            less_than: 'مقدار عددی %s باید کمتر از %s باشد.',
+            alpha: 'عبارت %s فقط می تواند شامل حروف شود.',
+            alpha_numeric: 'عبارت %s فقط می‌تواند شامل حروف و اعداد شود؛ نه کاراکتر دیگر.',
+            alpha_dash: 'عبارت %s فقط می‌تواند شامل حروف، اعداد، زیرخط (ـ) و خط تیره (-) باشد.',
+            numeric: 'عبارت %s فقط می‌تواند شامل اعداد باشد.',
+            integer: 'عبارت %s الزاماً باید یک عدد صحیح باشد.',
+            decimal: 'عبارت %s الزاماً باید از نوع عدد صحیح مبنای ده باشد.',
+            is_natural: 'عبارت %s الزاماً فقط می‌تواند از اعداد صحیح مثبت باشد.',
+            is_natural_no_zero: 'عبارت %s فقط می‌تواند از اعداد طبیعی باشد.',
+            valid_ip: 'عبارت %s باید یک IP معتبر باشد.',
+            valid_base64: 'عبارت %s باید شامل یک رشته از نوع base64 باشد.',
+            valid_credit_card: 'عبارت %s باید یک شماره کارت عابربانک معتبر باشد.',
+            is_file_type: 'ورودی %s فقط می‌تواند شامل فایل‌های %s باشد.',
+            valid_url: 'عبارت %s باید یک آدرس اینترنتی معتبر باشد.',
+            greater_than_date: 'عبارت %s باید از تاریخ %s به بعد باشد.',
+            less_than_date: 'عبارت %s باید از تاریخ %s به قبل باشد.',
+            greater_than_or_equal_date: 'عبارت %s باید حداقل از تاریخ %s به بعد باشد.',
+            less_than_or_equal_date: 'عبارت %s باید حداقل از تاریخ %s به قبل باشد.'
         },
         callback: function(errors) {
 
